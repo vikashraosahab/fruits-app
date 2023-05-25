@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "18114452999",
+    "project_id": "raosahabmart",
+    "storage_bucket": "raosahabmart.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18114452999:android:767aab86ab25c0d2ca94a2",
+        "android_client_info": {
+          "package_name": "com.example.raosahabshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "18114452999-cfmghornf2d30hclfqlr3jh0ibh9ea38.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLTi6lDpdkngZ0iw3GEG1VvgUR3ek1pdo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "18114452999-cfmghornf2d30hclfqlr3jh0ibh9ea38.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
