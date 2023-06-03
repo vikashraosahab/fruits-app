@@ -135,7 +135,6 @@ class HomeScreenState extends State<HomeScreen>{
               ),
               const SizedBox(height:35),
               Container(
-                margin:const EdgeInsets.only(top:10),
                 alignment:Alignment.center,
                child:StreamBuilder(
                 stream:FirebaseFirestore.instance.collection('data').snapshots(),
@@ -148,10 +147,23 @@ class HomeScreenState extends State<HomeScreen>{
                   }
                   if(snapshot.connectionState == ConnectionState.active){
                     if(snapshot.hasData){
-                       return ProductCart(snap:snapshot.data!.docs.length);
+                       return SizedBox(
+                        height:500,
+                        width:double.infinity,
+                        child:GridView(
+                          gridDelegate:const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount:2,
+                            crossAxisSpacing:3
+                            
+                          ),
+                        children:List.generate(
+                          snapshot.data!.docs.length, (index) =>
+                            ProductCart(snap:snapshot.data!.docs[index].data())
+                          )),
+                       );
                     }
                   }
-                  return Text('Sorry Your data has dinied',style:TextStyle(color:Colors.red));
+                  return const Text('Sorry Your data has dinied',style:TextStyle(color:Colors.red));
                  }
                 ),
                )
